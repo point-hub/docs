@@ -1,0 +1,9 @@
+services:
+  web:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80
