@@ -1,4 +1,7 @@
 ---
+title: Pointhub Dev
+titleTemplate: Platform for developer
+
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
@@ -9,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /guide/getting-started
+      link: /guide/introduction/getting-started
     - theme: alt
       text: Development Standard
       link: /standard
@@ -20,4 +23,3 @@ features:
   - title: Develop Easier
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

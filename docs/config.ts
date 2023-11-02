@@ -66,7 +66,10 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: 'About',
-      items: [{ text: 'Assets', link: 'https://assets.pointhub.net' }],
+      items: [
+        { text: 'Community Guide', link: '/about/community-guide/' },
+        { text: 'Assets', link: 'https://assets.pointhub.net' },
+      ],
     },
   ]
 }
@@ -90,6 +93,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'UI/UX Development', link: '' },
         { text: 'Deployment', link: '' },
       ],
+    },
+    {
+      text: 'Contribution Guide',
+      collapsed: false,
+      items: [{ text: 'Commit message convention', link: 'contribution-guide/commit-message-convention' }],
     },
   ]
 }
