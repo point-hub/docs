@@ -7,6 +7,7 @@ export default defineConfig({
   description: 'Platform',
   cleanUrls: true,
   srcDir: './src',
+  base: '/',
   sitemap: {
     hostname: 'https://dev.pointhub.net',
   },
