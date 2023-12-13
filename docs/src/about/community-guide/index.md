@@ -22,7 +22,7 @@ Code contribution is not the only form of contribution to the Pointhub community
 
 Contributing bug fixes or new features is the most direct form of contribution you can make.
 
-The Pointhub core repository provides a [contributing guide](/guide/contribution-guide/commit-message), which contains pull request guidelines and information regarding build setup and high-level architecture. Please make sure to read them before submitting pull requests.
+The Pointhub core repository provides a [contributing guide](/guide/contribution-guide/commit-message-convention), which contains pull request guidelines and information regarding build setup and high-level architecture. Please make sure to read them before submitting pull requests.
 
 
 
