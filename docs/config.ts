@@ -36,7 +36,7 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: 'Library',
       items: [
-        { text: 'Pointhub App', link: '/library/papp' },
+        { text: 'Pointhub App', link: 'https://dev.pointhub.net/library/papp' },
         { text: 'Starter Template', link: '/library/starter-template' },
       ],
     },
