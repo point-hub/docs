@@ -35,40 +35,27 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: 'Library',
       items: [
-        {
-          text: 'Starter Template',
-          items: [
-            { text: 'API Backend', link: 'https://github.com/point-hub/papi-starter' },
-            { text: 'API Docs', link: 'https://github.com/point-hub/api-docs-starter' },
-            { text: 'Web Application', link: 'https://github.com/point-hub/papp-starter' },
-            { text: 'Web Marketing', link: 'https://github.com/point-hub/web-starter' },
-            { text: 'Web Documentation', link: 'https://github.com/point-hub/docs-starter' },
-          ],
-        },
+        { text: 'Pointhub App', link: '/library/papp' },
+        { text: 'Starter Template', link: '/library/starter-template' },
       ],
     },
     {
-      text: 'Docs',
+      text: 'Service',
       items: [
-        {
-          text: 'Service',
-          items: [
-            { text: 'Auth', link: '/service/auth/' },
-            { text: 'Mail', link: '/service/mail/' },
-            { text: 'Storage', link: '/service/storage/' },
-          ],
-        },
-        {
-          text: 'Apps',
-          items: [{ text: 'ERP', link: '/apps/erp' }],
-        },
+        { text: 'Auth', link: '/service/auth/' },
+        { text: 'Mail', link: '/service/mail/' },
+        { text: 'Storage', link: '/service/storage/' },
       ],
+    },
+    {
+      text: 'Apps',
+      items: [{ text: 'ERP', link: '/apps/erp' }],
     },
     {
       text: 'About',
       items: [
-        { text: 'Community Guide', link: '/about/community-guide/' },
         { text: 'Assets', link: 'https://assets.pointhub.net' },
+        { text: 'Community Guide', link: '/about/community-guide/' },
       ],
     },
   ]
@@ -82,6 +69,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'What is Pointhub', link: 'introduction/what-is-pointhub' },
         { text: 'Getting Started', link: 'introduction/getting-started' },
+        { text: 'Bun vs Node', link: 'introduction/bun' },
       ],
     },
     {
