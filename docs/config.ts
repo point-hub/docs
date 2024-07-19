@@ -71,6 +71,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'What is Pointhub', link: 'introduction/what-is-pointhub' },
         { text: 'Getting Started', link: 'introduction/getting-started' },
         { text: 'Bun vs Node', link: 'introduction/bun' },
+        { text: 'MongoDB Database', link: 'introduction/database' },
       ],
     },
     {
