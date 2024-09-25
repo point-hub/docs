@@ -87,7 +87,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: 'Contribution Guide',
       collapsed: false,
-      items: [{ text: 'Commit message convention', link: 'contribution-guide/commit-message-convention' }],
+      items: [
+        { text: 'How do i ask a good question', link: 'contribution-guide/how-do-i-ask-a-good-question' },
+        { text: 'Commit message convention', link: 'contribution-guide/commit-message-convention' },
+      ],
     },
   ]
 }
