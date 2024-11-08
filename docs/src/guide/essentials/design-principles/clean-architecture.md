@@ -42,26 +42,26 @@ Examples: Web frameworks (like Express, Django), databases (like MySQL, MongoDB)
 
 ## Diagram of Clean Architecture
 
-```
-+---------------------------------------------------+
-|                 Frameworks & Drivers             |
-|  (UI, DB, Web, External APIs, etc.)              |
-+---------------------------------------------------+
-                      ↑
-+---------------------------------------------------+
-|             Interface Adapters (Controllers)      |
-|  (Data Converters, Presenters, Repositories)      |
-+---------------------------------------------------+
-                      ↑
-+---------------------------------------------------+
-|             Use Cases (Application Logic)         |
-|  (Business logic for specific operations)        |
-+---------------------------------------------------+
-                      ↑
-+---------------------------------------------------+
-|             Entities (Domain Logic)               |
-|  (Core business models, domain rules)             |
-+---------------------------------------------------+
+```mermaid
+---
+config:
+  themeVariables:
+    fontSize: 18px
+  flowchart:
+    wrappingWidth: 100%
+---
+flowchart BT
+  1@{ shape: rect, label: "**Entities (Domain Logic)**
+  (Core business models, domain rules)" }
+  2@{ shape: rect, label: "**Use Cases (Application Logic)**
+  (Business logic for specific operations)" }
+  3@{ shape: rect, label: "**Interface Adapters (Controllers)**
+  (Data Converters, Presenters, Repositories)" }
+  4@{ shape: rect, label: "**Frameworks & Drivers**
+  (UI, DB, Web, External APIs)" }
+  1 --> 2
+  2 --> 3
+  3 --> 4
 ```
 
 ## Example: Online Shopping Application

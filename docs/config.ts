@@ -1,7 +1,8 @@
-import { defineConfig, type DefaultTheme } from 'vitepress'
+import { type DefaultTheme } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   lang: 'en-US',
   title: 'Pointhub Dev',
   description: 'Platform',
@@ -17,9 +18,12 @@ export default defineConfig({
     logo: '/icon.png',
     nav: nav(),
     sidebar: {
-      '/guide/': { base: '/guide/', items: sidebarGuide() },
+      '/guide/': { base: '/guide', items: sidebarGuide() },
       '/guide/essentials/': { base: '/guide/essentials', items: sidebarEssentials() },
-      '/guide/pre-development/prd/': { base: '/guide/pre-development/prd/', items: sidebarPrd() },
+      '/guide/pre-development/': { base: '/guide/pre-development/introduction', items: sidebarPreDevelopment() },
+      '/guide/backend-development/': { base: '/guide/backend-development/introduction', items: sidebarBackend() },
+      '/guide/frontend-development/': { base: '/guide/frontend-development/introduction', items: sidebarFrontend() },
+      '/guide/deployment/': { base: '/guide/deployment/introduction', items: sidebarDeployment() },
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/point-hub' }],
     search: {
@@ -34,7 +38,34 @@ export default defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: 'Guide', link: '/guide/introduction/what-is-pointhub' },
+    {
+      text: 'Guide',
+      items: [
+        {
+          text: 'Getting Started',
+          items: [
+            { text: 'Introduction', link: '/guide/getting-started/introduction' },
+            { text: 'Essentials', link: '/guide/essentials/overview' },
+          ],
+        },
+        {
+          text: 'Development',
+          items: [
+            { text: 'Pre Development', link: '/guide/pre-development/' },
+            { text: 'Backend Development', link: '/guide/backend-development/' },
+            { text: 'Frontend Development', link: '/guide/frontend-development/' },
+            { text: 'Deployment', link: '/guide/deployment/' },
+          ],
+        },
+        {
+          text: 'Contribution Guide',
+          items: [
+            { text: 'How do I ask a good question', link: '/guide/contribution-guide/how-do-i-ask-a-good-question' },
+            { text: 'Commit message convention', link: '/guide/contribution-guide/commit-message-convention' },
+          ],
+        },
+      ],
+    },
     {
       text: 'Library',
       items: [
@@ -67,33 +98,21 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Getting Started',
       collapsed: false,
       items: [
-        { text: 'What is Pointhub', link: 'introduction/what-is-pointhub' },
-        { text: 'Getting Started', link: 'introduction/getting-started' },
-        { text: 'Bun vs Node', link: 'introduction/bun' },
-        { text: 'MongoDB Database', link: 'introduction/database' },
-        { text: 'Naming Convention', link: 'introduction/naming-convention' },
-        { text: 'Essentials', link: 'introduction/naming-convention' },
+        { text: 'Introduction', link: '/getting-started/introduction' },
+        { text: 'Essentials', link: '/essentials/overview' },
       ],
     },
     {
-      text: 'Essentials',
+      text: 'Development',
       collapsed: false,
       items: [
-        { text: 'Design Principles', link: 'essentials/design-principles/solid-principles' },
-        { text: 'Clean Architecture', link: '' },
-      ],
-    },
-    {
-      text: 'Development Flow',
-      collapsed: false,
-      items: [
-        { text: 'Design Requirement', link: 'pre-development/prd/1-introduction' },
-        { text: 'Backend Development', link: '' },
-        { text: 'Frontend Development', link: '' },
-        { text: 'Deployment', link: '' },
+        { text: 'Pre Development', link: '/pre-development/introduction' },
+        { text: 'Backend Development', link: '/backend-development/introduction' },
+        { text: 'Frontend Development', link: '/frontend-development/introduction' },
+        { text: 'Deployment', link: '/deployment/introduction' },
       ],
     },
     {
@@ -102,48 +121,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'How do I ask a good question', link: 'contribution-guide/how-do-i-ask-a-good-question' },
         { text: 'Commit message convention', link: 'contribution-guide/commit-message-convention' },
-      ],
-    },
-  ]
-}
-
-function sidebarPrd(): DefaultTheme.SidebarItem[] {
-  return [
-    {
-      text: 'PRD',
-      collapsed: false,
-      items: [
-        { text: 'Introduction', link: '1-introduction' },
-        { text: 'Mockups', link: '' },
-        { text: 'Behavior Driven Development (BDD)', link: '' },
-      ],
-    },
-    {
-      text: 'Design Principles',
-      collapsed: false,
-      items: [
-        { text: 'Clean Architecture', link: '' },
-        { text: 'Solid Principles', link: '' },
-        { text: 'Behavior Driven Development (BDD)', link: '' },
-      ],
-    },
-    {
-      text: 'Design Patterns',
-      collapsed: false,
-      items: [
-        { text: 'Strategy Pattern', link: '' },
-        { text: 'Provider Pattern', link: '' },
-        { text: 'Facade Pattern', link: '' },
-        { text: 'Repository Pattern', link: '' },
-        { text: 'Factory Pattern', link: '' },
-      ],
-    },
-    {
-      text: 'Best Practices',
-      collapsed: false,
-      items: [
-        { text: 'Code Style', link: '' },
-        { text: 'How to use If else correctly', link: '' },
       ],
     },
   ]
@@ -193,6 +170,7 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
         { text: 'Facade Pattern', link: '/design-patterns/facade-pattern' },
         { text: 'Repository Pattern', link: '/design-patterns/repository-pattern' },
         { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
+        { text: 'Builder Pattern', link: '/design-patterns/factory-pattern' },
       ],
     },
     {
@@ -200,7 +178,92 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Code Style', link: '' },
+        { text: 'Naming Convention', link: '/best-practices/naming-convention' },
         { text: 'How to use If else correctly', link: '' },
+      ],
+    },
+  ]
+}
+
+function sidebarPreDevelopment(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Pre Development',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: '/introduction' },
+        { text: 'Directory Structure', link: '/directory-structure' },
+      ],
+    },
+    {
+      text: 'Framework',
+      collapsed: false,
+      items: [
+        { text: 'Bun vs Node', link: '/framework/bun' },
+        { text: 'MongoDB Database', link: '/framework/database' },
+      ],
+    },
+  ]
+}
+
+function sidebarBackend(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Backend Development',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: '/introduction' },
+        { text: 'Directory Structure', link: '/directory-structure' },
+      ],
+    },
+    {
+      text: 'Framework',
+      collapsed: false,
+      items: [
+        { text: 'Bun vs Node', link: '/framework/bun' },
+        { text: 'MongoDB Database', link: '/framework/database' },
+      ],
+    },
+  ]
+}
+
+function sidebarFrontend(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Frontend Development',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: '/introduction' },
+        { text: 'Directory Structure', link: '' },
+      ],
+    },
+    {
+      text: 'Framework',
+      collapsed: false,
+      items: [
+        { text: 'Bun vs Node', link: '/framework/bun' },
+        { text: 'MongoDB Database', link: '/framework/database' },
+      ],
+    },
+  ]
+}
+
+function sidebarDeployment(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Deployment',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: '' },
+        { text: 'Directory Structure', link: '' },
+      ],
+    },
+    {
+      text: 'Framework',
+      collapsed: false,
+      items: [
+        { text: 'Bun vs Node', link: '/framework/bun' },
+        { text: 'MongoDB Database', link: '/framework/database' },
       ],
     },
   ]
