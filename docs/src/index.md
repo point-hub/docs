@@ -18,8 +18,13 @@ hero:
       link: /standard
 
 features:
-  - title: Develop Faster
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Develop Easier
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Community Guide
+    details: Comprehensive guide on how to be a positive, productive member of the programming community
+    link: /about/community-guide/
+  - title: Assets
+    details: Typically used by designers, developers, and content creators to maintain consistency in branding and design
+    link: https://assets.pointhub.net
+  - title: Starter Template
+    details: Pre-built, ready-to-use template that provides a foundation for a website and application
+    link: /library/starter-template
 ---

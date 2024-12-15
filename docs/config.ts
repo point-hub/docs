@@ -12,7 +12,10 @@ export default withMermaid({
   sitemap: {
     hostname: 'https://dev.pointhub.net',
   },
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'stylesheet', href: 'https://assets.pointhub.net/assets/fontawesome-6/css/all.min.css' }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/icon.png',
@@ -20,9 +23,15 @@ export default withMermaid({
     sidebar: {
       '/guide/': { base: '/guide', items: sidebarGuide() },
       '/guide/essentials/': { base: '/guide/essentials', items: sidebarEssentials() },
-      '/guide/pre-development/': { base: '/guide/pre-development/introduction', items: sidebarPreDevelopment() },
-      '/guide/backend-development/': { base: '/guide/backend-development/introduction', items: sidebarBackend() },
-      '/guide/frontend-development/': { base: '/guide/frontend-development/introduction', items: sidebarFrontend() },
+      '/guide/pre-development/': { base: '/guide/pre-development', items: sidebarPreDevelopment() },
+      '/guide/backend-development/': {
+        base: '/guide/backend-development',
+        items: sidebarBackendDevelopment(),
+      },
+      '/guide/frontend-development/': {
+        base: '/guide/frontend-development',
+        items: sidebarFrontendDevelopment(),
+      },
       '/guide/deployment/': { base: '/guide/deployment/introduction', items: sidebarDeployment() },
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/point-hub' }],
@@ -67,29 +76,25 @@ function nav(): DefaultTheme.NavItem[] {
       ],
     },
     {
-      text: 'Library',
+      text: 'Ecosystem',
       items: [
-        { text: 'Pointhub App', link: 'https://dev.pointhub.net/library/papp' },
-        { text: 'Starter Template', link: '/library/starter-template' },
-      ],
-    },
-    {
-      text: 'Service',
-      items: [
-        { text: 'Auth', link: '/service/auth/' },
-        { text: 'Mail', link: '/service/mail/' },
-        { text: 'Storage', link: '/service/storage/' },
-      ],
-    },
-    {
-      text: 'Apps',
-      items: [{ text: 'ERP', link: '/apps/erp' }],
-    },
-    {
-      text: 'About',
-      items: [
-        { text: 'Assets', link: 'https://assets.pointhub.net' },
-        { text: 'Community Guide', link: '/about/community-guide/' },
+        { text: 'Dev Documentation', link: 'https://dev.pointhub.net/' },
+        {
+          text: 'Services',
+          items: [
+            { text: 'Auth', link: 'https://dev.pointhub.net/services/auth/' },
+            { text: 'Storage', link: 'https://dev.pointhub.net/services/storage/' },
+            { text: 'Mail', link: 'https://dev.pointhub.net/services/mail/' },
+          ],
+        },
+        {
+          text: 'Apps',
+          items: [{ text: 'ERP', link: 'https://dev.pointhub.net/apps/erp/' }],
+        },
+        {
+          text: 'Libraries',
+          items: [{ text: 'UI Library', link: 'https://dev.pointhub.net/library/papp' }],
+        },
       ],
     },
   ]
@@ -131,22 +136,7 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
     {
       text: 'Essentials',
       collapsed: false,
-      items: [
-        { text: 'Overview', link: '/overview' },
-        { text: 'Behavior', link: '' },
-      ],
-    },
-    {
-      text: 'Testing',
-      collapsed: false,
-      items: [
-        { text: 'Introduction', link: '/testing/introduction' },
-        { text: 'Test Driven Development', link: '/testing/test-driven-development' },
-        { text: 'Behavior Driven Development', link: '/testing/behavior-driven-development' },
-        { text: 'End-to-End Testing', link: '/testing/end-to-end-testing' },
-        { text: 'Performance Testing', link: '/testing/performance-testing' },
-        { text: 'Continuous Testing', link: '/testing/continuous-testing' },
-      ],
+      items: [{ text: 'Overview', link: '/overview' }],
     },
     {
       text: 'Design Principles',
@@ -170,16 +160,29 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
         { text: 'Facade Pattern', link: '/design-patterns/facade-pattern' },
         { text: 'Repository Pattern', link: '/design-patterns/repository-pattern' },
         { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
-        { text: 'Builder Pattern', link: '/design-patterns/factory-pattern' },
+        { text: 'Builder Pattern', link: '/design-patterns/builder-pattern' },
+      ],
+    },
+    {
+      text: 'Testing',
+      collapsed: false,
+      items: [
+        { text: 'Introduction', link: '/testing/introduction' },
+        { text: 'Test Driven Development', link: '/testing/test-driven-development' },
+        { text: 'Behavior Driven Development', link: '/testing/behavior-driven-development' },
+        { text: 'End-to-End Testing', link: '/testing/end-to-end-testing' },
+        { text: 'Performance Testing', link: '/testing/performance-testing' },
+        { text: 'Continuous Testing', link: '/testing/continuous-testing' },
       ],
     },
     {
       text: 'Best Practices',
       collapsed: false,
       items: [
-        { text: 'Code Style', link: '' },
+        { text: 'Avoiding Magic Number', link: '/best-practices/avoiding-magic-number' },
+        { text: 'Code Style', link: '/best-practices/code-style' },
         { text: 'Naming Convention', link: '/best-practices/naming-convention' },
-        { text: 'How to use If else correctly', link: '' },
+        { text: 'Unnecessary Else', link: '/best-practices/unnecessary-else' },
       ],
     },
   ]
@@ -192,42 +195,33 @@ function sidebarPreDevelopment(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Introduction', link: '/introduction' },
-        { text: 'Directory Structure', link: '/directory-structure' },
-      ],
-    },
-    {
-      text: 'Framework',
-      collapsed: false,
-      items: [
-        { text: 'Bun vs Node', link: '/framework/bun' },
-        { text: 'MongoDB Database', link: '/framework/database' },
+        { text: 'Gherkin', link: '/gherkin' },
       ],
     },
   ]
 }
 
-function sidebarBackend(): DefaultTheme.SidebarItem[] {
+function sidebarBackendDevelopment(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Backend Development',
       collapsed: false,
       items: [
         { text: 'Introduction', link: '/introduction' },
+        { text: 'Bun', link: '/bun' },
+        { text: 'MongoDB Database', link: '/database' },
         { text: 'Directory Structure', link: '/directory-structure' },
-      ],
-    },
-    {
-      text: 'Framework',
-      collapsed: false,
-      items: [
-        { text: 'Bun vs Node', link: '/framework/bun' },
-        { text: 'MongoDB Database', link: '/framework/database' },
+        { text: 'REST API', link: '/rest-api' },
+        { text: 'API Documentation', link: '/api-documentation' },
+        { text: 'De-Normalization', link: '/de-normalization' },
+        { text: 'Schema Design', link: '/schema-design' },
+        { text: 'Schema Design', items: [{ text: 'Schema Design', link: '/schema-design' }] },
       ],
     },
   ]
 }
 
-function sidebarFrontend(): DefaultTheme.SidebarItem[] {
+function sidebarFrontendDevelopment(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Frontend Development',
@@ -235,14 +229,17 @@ function sidebarFrontend(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Introduction', link: '/introduction' },
         { text: 'Directory Structure', link: '' },
+        { text: 'Uno CSS', link: '' },
+        { text: 'UI Library', link: '' },
       ],
     },
     {
       text: 'Framework',
       collapsed: false,
       items: [
-        { text: 'Bun vs Node', link: '/framework/bun' },
-        { text: 'MongoDB Database', link: '/framework/database' },
+        { text: 'Bun', link: '/framework/bun' },
+        { text: 'Vite', link: '/framework/bun' },
+        { text: 'Vuejs', link: '/framework/database' },
       ],
     },
   ]
