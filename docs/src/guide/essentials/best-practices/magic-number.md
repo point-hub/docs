@@ -1,8 +1,10 @@
-# Avoiding Magic Number
+# Magic Number
 
 In programming, a magic number refers to a hardcoded value that appears directly in the code, without any explanation of its meaning. These values are often seen as a bad practice because they reduce code readability and maintainability. Instead of using magic numbers, it’s better to define constants or enums to give meaning to the values.
 
-## Incorrect Example
+## Example
+
+### Problem
 
 ```ts
 function calculateCircleArea(radius: number): number {

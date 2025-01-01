@@ -79,18 +79,24 @@ function nav(): DefaultTheme.NavItem[] {
       text: 'Ecosystem',
       items: [
         { text: 'Dev Documentation', link: 'https://dev.pointhub.net/' },
-        {
-          text: 'Services',
-          items: [
-            { text: 'Auth', link: 'https://dev.pointhub.net/services/auth/' },
-            { text: 'Storage', link: 'https://dev.pointhub.net/services/storage/' },
-            { text: 'Mail', link: 'https://dev.pointhub.net/services/mail/' },
-          ],
-        },
-        {
-          text: 'Apps',
-          items: [{ text: 'ERP', link: 'https://dev.pointhub.net/apps/erp/' }],
-        },
+        // TODO: finish the content first before adding this link
+        // {
+        //   text: 'Apps',
+        //   items: [{ text: 'ERP', link: 'https://dev.pointhub.net/apps/erp/' }],
+        // },
+        // {
+        //   text: 'Services',
+        //   items: [
+        //     { text: 'Auth', link: 'https://dev.pointhub.net/services/auth/' },
+        //     { text: 'Storage', link: 'https://dev.pointhub.net/services/storage/' },
+        //     { text: 'Mail', link: 'https://dev.pointhub.net/services/mail/' },
+        //   ],
+        // },
+        // TODO: finish the content first before adding this link
+        // {
+        //   text: 'Apps',
+        //   items: [{ text: 'ERP', link: 'https://dev.pointhub.net/apps/erp/' }],
+        // },
         {
           text: 'Libraries',
           items: [{ text: 'UI Library', link: 'https://dev.pointhub.net/library/papp' }],
@@ -155,12 +161,16 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       text: 'Design Patterns',
       collapsed: false,
       items: [
+        { text: 'Introduction', link: '/design-patterns/introduction' },
+        { text: 'Singleton Pattern', link: '/design-patterns/singleton-pattern' },
+        { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
+        { text: 'Builder Pattern', link: '/design-patterns/builder-pattern' },
+        { text: 'Adapter Pattern', link: '/design-patterns/adapter-pattern' },
+        { text: 'Decorator Pattern', link: '/design-patterns/decorator-pattern' },
         { text: 'Strategy Pattern', link: '/design-patterns/strategy-pattern' },
         { text: 'Provider Pattern', link: '/design-patterns/provider-pattern' },
         { text: 'Facade Pattern', link: '/design-patterns/facade-pattern' },
         { text: 'Repository Pattern', link: '/design-patterns/repository-pattern' },
-        { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
-        { text: 'Builder Pattern', link: '/design-patterns/builder-pattern' },
       ],
     },
     {
@@ -179,7 +189,7 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       text: 'Best Practices',
       collapsed: false,
       items: [
-        { text: 'Avoiding Magic Number', link: '/best-practices/avoiding-magic-number' },
+        { text: 'Magic Number', link: '/best-practices/magic-number' },
         { text: 'Code Style', link: '/best-practices/code-style' },
         { text: 'Naming Convention', link: '/best-practices/naming-convention' },
         { text: 'Unnecessary Else', link: '/best-practices/unnecessary-else' },

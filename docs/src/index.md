@@ -1,13 +1,13 @@
 ---
-title: Pointhub Dev
-titleTemplate: Platform for developer
+title: Pointhub Development Portal
+titleTemplate: Pointhub Development Portal
 
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Pointhub Dev"
-  text: "Platform"
+  name: "Pointhub"
+  text: "Development Portal"
   tagline: Build powerful, scalable applications, with minimal overhead and full out-of-the-box templates
   actions:
     - theme: brand

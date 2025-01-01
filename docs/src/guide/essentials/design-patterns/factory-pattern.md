@@ -1,13 +1,18 @@
+---
+outline: deep
+---
+
 # Factory Pattern
 
 The Factory Pattern is a creational design pattern that provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. It is typically used to instantiate different types of objects in a more flexible way, without having to specify the exact class of the object that will be created.
 
-## Incorrect Example
+## Example
 
-In this incorrect example, the factory function is not well-defined, and it makes decisions about the creation of objects inside a concrete class, violating the principles of the factory pattern.
+### Problem
+
+In this code, if you want to add a new animal type, such as a "bird", you need to modify the AnimalFactory class, specifically the createAnimal method. This modification breaks the OCP because you are altering existing code to accommodate new behavior.
 
 ```ts
-// Incorrect Factory Pattern
 class Dog {
   bark() {
     console.log('Woof!');
@@ -48,13 +53,11 @@ Issues with the above example:
 - **Violation of Open/Closed Principle:** If you need to add a new animal, you would need to modify the AnimalFactory class. This makes the code difficult to extend and maintain.
 - **Factory Logic in Concrete Class:** The logic for creating objects is directly inside the AnimalFactory class, which doesn't scale well when new types of animals need to be added.
 
-## Correct Example
+### Solution
 
 A correct implementation of the Factory Pattern would separate concerns better, use an abstract class or interface for the animal types, and allow for easy extension without modifying the factory.
 
 ```ts
-// Correct Factory Pattern
-
 // Define an abstract class for Animal
 interface Animal {
   speak(): void;
