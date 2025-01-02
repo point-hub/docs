@@ -4,7 +4,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   lang: 'en-US',
-  title: 'Pointhub Dev',
+  title: 'Development Portal',
   description: 'Platform',
   cleanUrls: true,
   srcDir: './src',
@@ -130,8 +130,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Contribution Guide',
       collapsed: false,
       items: [
-        { text: 'How do I ask a good question', link: 'contribution-guide/how-do-i-ask-a-good-question' },
-        { text: 'Commit message convention', link: 'contribution-guide/commit-message-convention' },
+        { text: 'How do I ask a good question', link: '/contribution-guide/how-do-i-ask-a-good-question' },
+        { text: 'Commit message convention', link: '/contribution-guide/commit-message-convention' },
       ],
     },
   ]

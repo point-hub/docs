@@ -4,7 +4,9 @@ The else statement is commonly used to provide an alternative block of code when
 
 ## Example 1: Simple Conditional Logic
 
-### Incorrect Example
+### Problem
+
+In the example, we use nested else blocks, which is unnecessary and leads to increased indentation and complexity.
 
 ```ts
 function getNumberSign(num: number): string {
@@ -20,13 +22,9 @@ function getNumberSign(num: number): string {
 }
 ```
 
-In the above example, we use nested else blocks, which is unnecessary and leads to increased indentation and complexity.
+### Solution
 
-Correct Example (avoiding else):
-
-### Correct Example
-
-In this corrected example, we return early for each condition, avoiding the need for any else statements. This makes the code simpler and easier to follow.
+In this example, we return early for each condition, avoiding the need for any else statements. This makes the code simpler and easier to follow.
 
 ```ts
 function getNumberSign(num: number): string {
@@ -36,67 +34,11 @@ function getNumberSign(num: number): string {
 }
 ```
 
-## Example 1: Simple Conditional Logic
+## Example 2: Using a Ternary Operator
 
-### Incorrect Example
+### Problem
 
-```ts
-function processOrder(order: Order): string {
-  if (order.status === "pending") {
-    // Process pending order
-    return "Order is pending";
-  } else {
-    if (order.status === "shipped") {
-      // Process shipped order
-      return "Order has been shipped";
-    } else {
-      return "Unknown order status";
-    }
-  }
-}
-```
-
-### Correct Example
-
-```ts
-function processOrder(order: Order): string {
-  if (order.status === "pending") return "Order is pending";
-  if (order.status === "shipped") return "Order has been shipped";
-  return "Unknown order status";
-}
-```
-## Example 1: Simple Conditional Logic
-
-### Incorrect Example
-
-```ts
-function checkEligibility(age: number, hasPermission: boolean): string {
-  if (age >= 18) {
-    if (hasPermission) {
-      return "Eligible";
-    } else {
-      return "Permission required";
-    }
-  } else {
-    return "Underage";
-  }
-}
-```
-
-### Correct Example
-
-```ts
-function checkEligibility(age: number, hasPermission: boolean): string {
-  if (age < 18) return "Underage";
-  if (!hasPermission) return "Permission required";
-  return "Eligible";
-}
-
-```
-
-## Example 4: Using a Ternary Operator (for Simple Conditions)
-
-### Incorrect Example
+Without using the ternary operator, you'd need to write out full if-else statements, which can make the code unnecessarily longer, especially for simple conditional assignments.
 
 ```ts
 function getDiscount(isMember: boolean): number {
@@ -108,7 +50,10 @@ function getDiscount(isMember: boolean): number {
 }
 ```
 
-### Correct Example
+### Solution
+
+
+A ternary operator is a concise way to perform conditional operations in many programming languages. It’s typically used as a shorthand for an if-else statement.
 
 ```ts
 function getDiscount(isMember: boolean): number {

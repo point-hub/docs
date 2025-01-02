@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Magic Number
 
 In programming, a magic number refers to a hardcoded value that appears directly in the code, without any explanation of its meaning. These values are often seen as a bad practice because they reduce code readability and maintainability. Instead of using magic numbers, it’s better to define constants or enums to give meaning to the values.
@@ -24,7 +28,7 @@ In this case:
 - The value `3.14159` is a magic number for π (Pi), which can be hard to understand without context.
 - The value `0.2` represents a 20% discount, which is not immediately clear from just looking at the code.
 
-## Correct Example
+### Solution
 
 Instead of using magic numbers, you can define constants to improve readability and maintainability:
 

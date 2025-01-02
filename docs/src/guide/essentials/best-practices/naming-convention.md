@@ -6,35 +6,37 @@ outline: deep
 
 Naming conventions in code are crucial for readability and maintainability. Here are some common conventions across various programming languages:
 
-1. Camel Case
+## Common naming conventions
 
-    - **Usage:** Common in languages like Java and Javascript.
-    - **Example:** `myVariableName`, `calculateTotalAmount`
+### 1. Camel Case
 
-2. Snake Case
+- **Usage:** Common in languages like Java and Javascript.
+- **Example:** `myVariableName`, `calculateTotalAmount`
+
+### 2. Snake Case
   
-    - **Usage:** Frequently used in Python and some database naming.
-    - **Example:** `my_variable_name`, `calculate_total_amount`
+- **Usage:** Frequently used in Python and some database naming.
+- **Example:** `my_variable_name`, `calculate_total_amount`
 
-3. Pascal Case
+### 3. Pascal Case
   
-    - **Usage:** Often used for class names in languages like C# and Java.
-    - **Example:** `MyClassName`, `CalculateTotalAmount`
+- **Usage:** Often used for class names in languages like C# and Java.
+- **Example:** `MyClassName`, `CalculateTotalAmount`
 
-4. Kebab Case
+### 4. Kebab Case
   
-    - **Usage:** Common in URLs and sometimes in CSS class names.
-    - **Example:** `my-variable-name`, `calculate-total-amount`
+- **Usage:** Common in URLs and sometimes in CSS class names.
+- **Example:** `my-variable-name`, `calculate-total-amount`
 
-5. Uppercase
+### 5. Uppercase
   
-    - **Usage:** Typically for constants.
-    - **Example:** `MAX_VALUE`, `DEFAULT_TIMEOUT`
+- **Usage:** Typically for constants.
+- **Example:** `MAX_VALUE`, `DEFAULT_TIMEOUT`
 
-6. Lowercase
+### 6. Lowercase
   
-    - **Usage:** Typically for variables.
-    - **Example:** `items`, `sum`
+- **Usage:** Typically for variables.
+- **Example:** `items`, `sum`
 
 
 ## Javascript Code
