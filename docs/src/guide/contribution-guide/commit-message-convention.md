@@ -56,9 +56,23 @@ includes motivation for the change and contrasts with previous behavior
 - don't use dot(.) at end
 - don't capitalize first letter
 
+## Body
+
+The body can be more detailed, but each line should generally be kept under 80 characters for readability.
+
+If your commit includes multiple changes, use bullet points to list them clearly in the body of the message.
+
+```sh
+Improve database query performance
+
+- Replaced inefficient queries with optimized versions
+- Added database indexing to speed up search operations
+- Updated caching mechanism to store frequently accessed data
+```
+
 ## Footer
 
-Footer ooter should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.
+Footer should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.
 
 
 ### Referencing issues
