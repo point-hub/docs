@@ -2,7 +2,7 @@
 
 The Provider pattern is commonly used to abstract the creation and provisioning of dependencies or services in various contexts like dependency injection
 
-## Incorrect Implementation
+## Problem
 
 1. Direct instantiation inside the provider (which breaks the abstraction).
 2. No clear separation between the interface of the provider and the concrete implementation.
@@ -28,7 +28,7 @@ const service = provider.provide();
 console.log(service.getData()); // "Service Data"
 ```
 
-## Correct Implementation
+## Solution
 
 1. Use an interface for the service provider.
 2. Separate creation logic to make the provider more reusable and flexible.

@@ -4,7 +4,7 @@ This principle emphasizes simplicity in code. Avoid unnecessary complexity and s
 
 **Purpose:** Simple code is easier to read, understand, and maintain. Complexity should be introduced only when absolutely necessary.
 
-## Incorrect Example
+## Problem
 
 Here, the code is unnecessarily complex, making it harder to understand than it needs to be.
 
@@ -60,7 +60,7 @@ Why It's Incorrect:
 - There are redundant conditions and checks that can be simplified.
 - The user details could be returned in a much cleaner way.
 
-## Correct Example
+## Solution
 
 Now, let's simplify the logic and make it more readable.
 

@@ -15,7 +15,7 @@ hero:
       link: /guide/getting-started/introduction
     - theme: alt
       text: Development Standard
-      link: /standard
+      link: /guide/essentials/overview
 
 features:
   - title: Community Guide

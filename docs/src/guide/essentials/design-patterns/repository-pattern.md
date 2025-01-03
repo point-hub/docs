@@ -2,9 +2,13 @@
 
 The Repository Pattern is a design pattern used to manage data access and abstract the interaction with the data source (such as databases or APIs). It allows you to centralize the logic for querying and updating data, and it can be used to separate the domain logic from the data access logic.
 
-## Incorrect Example
+## Problem
 
 The incorrect implementation would violate one or more principles of the repository pattern, such as directly interacting with the data source inside business logic, or not properly abstracting the data source
+
+- **Mixed Concerns:** The IncorrectUserRepository class mixes business logic (creating, updating, deleting users) with data access logic (e.g., saving to a database). This breaks the separation of concerns and makes the code harder to maintain and test.
+- **Not Abstracted:** The saveUserToDatabase method is directly tied to a specific implementation of data persistence (e.g., saving to a database), which is not abstracted. In the Repository Pattern, you would want to abstract the actual data source logic to avoid tight coupling between the business logic and the storage details.
+- **Lack of Interface:** The repository should ideally implement an interface, which allows you to easily swap implementations, e.g., switching from an in-memory repository to a database-backed repository without affecting the business logic.
 
 ```ts
 // Entity class
@@ -62,13 +66,7 @@ class IncorrectUserRepository {
 })();
 ```
 
-Problems in the Incorrect Example:
-
-- **Mixed Concerns:** The IncorrectUserRepository class mixes business logic (creating, updating, deleting users) with data access logic (e.g., saving to a database). This breaks the separation of concerns and makes the code harder to maintain and test.
-- **Not Abstracted:** The saveUserToDatabase method is directly tied to a specific implementation of data persistence (e.g., saving to a database), which is not abstracted. In the Repository Pattern, you would want to abstract the actual data source logic to avoid tight coupling between the business logic and the storage details.
-- **Lack of Interface:** The repository should ideally implement an interface, which allows you to easily swap implementations, e.g., switching from an in-memory repository to a database-backed repository without affecting the business logic.
-
-## Correct Example
+## Solution
 
 In the correct example, the repository class properly abstracts data access and exposes methods to interact with the data, without directly exposing implementation details of the data source (e.g., database, API).
 

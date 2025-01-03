@@ -4,7 +4,7 @@ Fail fast is the idea that a system should detect and report errors as soon as t
 
 **Purpose:** By catching errors early, you can prevent further problems, improve debugging, and enhance system reliability.
 
-## Incorrect Example
+## Problem
 
 In this approach, the validation is done only after all steps are performed. This can lead to unnecessary operations or calculations being done before identifying an issue.
 
@@ -52,7 +52,7 @@ Why it's incorrect:
 - You only catch validation issues at the end, after all operations are performed.
 
 
-## Correct Example
+## Solution
 
 In this approach, we immediately validate inputs, and if any input is incorrect, we stop further processing and throw an error. This is the "fail-fast" strategy — stop as soon as you detect an issue.
 

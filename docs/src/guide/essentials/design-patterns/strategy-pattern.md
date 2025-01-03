@@ -6,9 +6,9 @@ Strategy Pattern can be seen as an implementation that helps with Separation of 
 
 While SoC applies more broadly to the system architecture and encourages modularization across various concerns (UI, business logic, etc.), the Strategy Pattern is a way to achieve Separation of Concerns within a specific behavior or task (like choosing different payment strategies).
 
-## Incorrect Implementation
+## Problem
 
-In the incorrect example, the Strategy pattern is implemented in a way that violates the core principle of the pattern, which is separation of concerns. A possible mistake could be that the context class (which uses the strategy) is directly responsible for creating or managing the strategies, which goes against the idea of decoupling strategies from the context.
+A possible mistake could be that the context class (which uses the strategy) is directly responsible for creating or managing the strategies, which goes against the idea of decoupling strategies from the context.
 
 ```ts
 class PayPalPayment {
@@ -44,13 +44,13 @@ const paymentService = new PaymentService('paypal');
 paymentService.executePayment(100);
 ```
 
-Problems with the Incorrect Implementation:
+Problems with the Implementation:
 
 1. **Tight Coupling:** PaymentService is directly responsible for creating instances of the payment strategies (PayPalPayment and CreditCardPayment). This makes the code less flexible and harder to maintain.
 2. **Poor Extensibility:** If new payment strategies need to be added (like BitcoinPayment, etc.), the PaymentService class must be modified every time. This violates the Open/Closed Principle.
 3. **Fragility:** The class could break if an invalid paymentMethod is passed (e.g., the strategy would be null).
 
-## Correct Implementation
+## Solution
 
 The context (PaymentService) should not be responsible for instantiating the strategy; instead, it should be provided with a strategy at runtime. The strategy itself should be an abstraction with different concrete implementations.
 

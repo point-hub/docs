@@ -6,7 +6,7 @@ SOLID is an acronym for a set of five design principles aimed at making object-o
 
 Each class should have only one reason to change, meaning it should only have one job or responsibility.
 
-### Incorrect Example
+### Problem
 
 In this case, the `EmployeeService` class is responsible for both employee data (name and salary) and saving data to a database. This violates SRP.
 
@@ -26,7 +26,7 @@ class EmployeeService {
 }
 ```
 
-### Correct Example
+### Solution
 
 The `EmployeeService` class now only handles employee data, and a separate `ReportService` class is responsible for generating reports. This adheres to the SRP.
 
@@ -54,7 +54,7 @@ class ReportService {
 
 Classes should be open for extension but closed for modification. This allows us to add new features without changing existing code.
 
-### Incorrect Example
+### Problem
 
 The following class requires modification when new employee roles are added. This violates the OCP, as the class is not open for extension but closed for modification.
 
@@ -74,7 +74,7 @@ class Employee {
 }
 ```
 
-### Correct Example
+### Solution
 
 The class can be extended by adding new role-based salary calculations without modifying the existing code. This follows the OCP.
 
@@ -108,7 +108,7 @@ class Designer extends Employee {
 
 Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
 
-### Incorrect Example
+### Problem
 
 In this example, `FullTimeEmployee` and `PartTimeEmployee` don't properly adhere to LSP. `PartTimeEmployee` is forced to return incorrect data (null salary) just because it's a subclass, breaking behavior expectations.
 
@@ -133,7 +133,7 @@ class PartTimeEmployee extends Employee {
 }
 ```
 
-### Correct Example
+### Solution
 
 The `PartTimeEmployee` class follows the LSP by properly implementing the getSalary() method, ensuring that all subclasses of `Employee` behave consistently.
 
@@ -160,7 +160,7 @@ class PartTimeEmployee extends Employee {
 
 Clients should not be forced to depend on interfaces they do not use.
 
-### Incorrect Example
+### Problem
 
 The following example forces `EmployeeService` to implement methods it doesn't need, violating the ISP.
 
@@ -191,7 +191,7 @@ class EmployeeService implements EmployeeActions {
 }
 ```
 
-### Correct Example
+### Solution
 
 By splitting the `EmployeeActions` interface into smaller, more specific interfaces, we ensure that classes only implement methods they actually need.
 
@@ -225,7 +225,7 @@ class EmployeeService implements EmployeeCreation, EmployeeReport {
 
 High-level modules should not depend on low-level modules. Both should depend on abstractions.
 
-### Incorrect Example
+### Problem
 
 The `EmployeeService` directly depends on the `Database` class. This is a violation of the DIP because higher-level modules (`EmployeeService`) should not depend on lower-level modules (`Database`).
 
@@ -245,7 +245,7 @@ class EmployeeService {
 }
 ```
 
-### Correct Example
+### Solution
 
 The `EmployeeService` now depends on an abstraction (`DataStorage`) rather than a concrete class (`Database`), adhering to the DIP.
 

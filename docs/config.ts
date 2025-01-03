@@ -162,15 +162,14 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Introduction', link: '/design-patterns/introduction' },
-        { text: 'Singleton Pattern', link: '/design-patterns/singleton-pattern' },
-        { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
         { text: 'Builder Pattern', link: '/design-patterns/builder-pattern' },
-        { text: 'Adapter Pattern', link: '/design-patterns/adapter-pattern' },
-        { text: 'Decorator Pattern', link: '/design-patterns/decorator-pattern' },
-        { text: 'Strategy Pattern', link: '/design-patterns/strategy-pattern' },
+        { text: 'Factory Pattern', link: '/design-patterns/factory-pattern' },
         { text: 'Provider Pattern', link: '/design-patterns/provider-pattern' },
+        { text: 'Singleton Pattern', link: '/design-patterns/singleton-pattern' },
+        { text: 'Adapter Pattern', link: '/design-patterns/adapter-pattern' },
         { text: 'Facade Pattern', link: '/design-patterns/facade-pattern' },
         { text: 'Repository Pattern', link: '/design-patterns/repository-pattern' },
+        { text: 'Strategy Pattern', link: '/design-patterns/strategy-pattern' },
       ],
     },
     {
@@ -178,11 +177,12 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Introduction', link: '/testing/introduction' },
-        { text: 'Test Driven Development', link: '/testing/test-driven-development' },
-        { text: 'Behavior Driven Development', link: '/testing/behavior-driven-development' },
-        { text: 'End-to-End Testing', link: '/testing/end-to-end-testing' },
-        { text: 'Performance Testing', link: '/testing/performance-testing' },
-        { text: 'Continuous Testing', link: '/testing/continuous-testing' },
+        // TODO: finish the content first before adding this link
+        // { text: 'Test Driven Development', link: '/testing/test-driven-development' },
+        // { text: 'Behavior Driven Development', link: '/testing/behavior-driven-development' },
+        // { text: 'End-to-End Testing', link: '/testing/end-to-end-testing' },
+        // { text: 'Performance Testing', link: '/testing/performance-testing' },
+        // { text: 'Continuous Testing', link: '/testing/continuous-testing' },
       ],
     },
     {
@@ -192,7 +192,7 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
         { text: 'Magic Number', link: '/best-practices/magic-number' },
         { text: 'Code Style', link: '/best-practices/code-style' },
         { text: 'Naming Convention', link: '/best-practices/naming-convention' },
-        { text: 'Unnecessary Else', link: '/best-practices/unnecessary-else' },
+        { text: 'Deep Nesting', link: '/best-practices/deep-nesting' },
       ],
     },
   ]

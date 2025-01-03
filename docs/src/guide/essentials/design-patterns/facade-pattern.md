@@ -11,7 +11,7 @@ Let’s take a Human Resources (HR) Management System as an example. In a typica
 
 The Facade Pattern can be applied to simplify the interaction with these subsystems, providing a single interface for performing multiple HR-related tasks.
 
-## Incorrect Example
+## Problem
 
 The client interacts directly with each subsystem, making the code more complex and harder to maintain.
 
@@ -79,7 +79,7 @@ trainingManagement.enroll(employeeId, "Leadership");        // Enroll in trainin
 employeeManagement.terminateEmployee(employeeId);           // Terminate employee
 ```
 
-## Correct Example
+## Solution
 
 The facade will allow the HR department to perform common tasks like hiring an employee, processing payroll, and managing leave in a simple and unified manner.
 

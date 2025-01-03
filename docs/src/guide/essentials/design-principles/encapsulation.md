@@ -4,12 +4,12 @@ Encapsulation refers to bundling data (variables) and methods that operate on th
 
 **Purpose:** It helps protect the integrity of the data and prevents unintended interference or misuse.
 
-## Incorrect Example
+## Problem
 
 Without proper encapsulation, where the balance and accountHolder are publicly accessible and modifiable
 
 ```ts
-class BankAccountIncorrect {
+class BankAccount {
   // Public properties: no restrictions on accessing or modifying them
   public balance: number;
   public accountHolder: string;
@@ -42,13 +42,13 @@ class BankAccountIncorrect {
   }
 }
 
-const accountIncorrect = new BankAccountIncorrect("John Doe", 1000);
-accountIncorrect.balance = 5000;  // No restriction: balance can be changed directly
-accountIncorrect.accountHolder = "Jane Smith";  // No restriction: accountHolder can be changed directly
-console.log(`Balance: $${accountIncorrect.balance}`);
+const account = new BankAccount("John Doe", 1000);
+account.balance = 5000;  // No restriction: balance can be changed directly
+account.accountHolder = "Jane Smith";  // No restriction: accountHolder can be changed directly
+console.log(`Balance: $${account.balance}`);
 ```
 
-## Correct Example
+## Solution
 
 1. Private Property (balance):
 

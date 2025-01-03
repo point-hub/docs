@@ -4,7 +4,7 @@ This principle states that different concerns or responsibilities of a program s
 
 **Purpose:** Separation of concerns helps make the code more modular, easier to maintain, and allows changes to one part of the system without affecting others.
 
-## Incorrect Example
+## Problem
 
 In this example, a class mixes the concerns of data storage, business logic, and presentation:
 
@@ -44,7 +44,7 @@ Issues with this code:
 - **Business logic** is also embedded in the UserManager class, making it harder to maintain and test.
 
 
-## Correct Example
+## Solution
 
 Here’s how you could refactor the code to follow the Separation of Concerns principle by dividing the responsibilities into different classes:
 

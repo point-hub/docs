@@ -6,14 +6,17 @@ Design patterns can be broadly categorized into Creational, Structural, and Beha
 
 These patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The goal is to create objects in a way that avoids specifying the exact class of object that will be created.
 
-- [Singleton Pattern](/guide/essentials/design-patterns/singleton-pattern)
-Ensures that a class has only one instance and provides a global point of access to it.
+- [Builder Pattern](/guide/essentials/design-patterns/builder-pattern)
+Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 
 - [Factory Pattern](/guide/essentials/design-patterns/factory-pattern)
 Provides an interface for creating instances of a class, with its subclasses deciding which class to instantiate.
 
-- [Builder Pattern](/guide/essentials/design-patterns/builder-pattern)
-Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+- [Provider Pattern](/guide/essentials/design-patterns/builder-pattern)
+Providing objects or services, often dynamically or based on configuration, which is a core aspect of creational design.
+
+- [Singleton Pattern](/guide/essentials/design-patterns/singleton-pattern)
+Ensures that a class has only one instance and provides a global point of access to it.
 
 ## 2. Structural Patterns
 
@@ -22,22 +25,15 @@ These patterns deal with object composition and help ensure that objects and cla
 - [Adapter Pattern](/guide/essentials/design-patterns/adapter-pattern)
 Converts one interface to another that a client expects, making incompatible interfaces compatible.
 
-- [Decorator Pattern](/guide/essentials/design-patterns/decorator-pattern)
-Adds behavior to an object dynamically, without affecting the behavior of other objects from the same class.
+- [Facade Pattern](/guide/essentials/design-patterns/facade-pattern)
+Organizing the relationships between classes and subsystems by providing a unified interface that reduces complexity
 
-- [Proxy Pattern](/guide/essentials/design-patterns/proxy-pattern)
-Provides a surrogate or placeholder for another object to control access to it (e.g., lazy initialization, caching).
+- [Repository Pattern](/guide/essentials/design-patterns/repository-pattern)
+The repository acts as an intermediary between the domain and data mapping layers, providing a collection-like interface for accessing domain objects, typically using an underlying data source such as a database, web service, or in-memory store.
 
 ## 3. Behavioral Patterns
 
 These patterns are concerned with algorithms and the assignment of responsibilities between objects. They focus on how objects interact and communicate, emphasizing the interaction between the components.
 
-- [Observer Pattern](/guide/essentials/design-patterns/observer-pattern)
-Defines a one-to-many dependency where a change in one object triggers updates to all dependent objects (observers).
-
 - [Strategy Pattern](/guide/essentials/design-patterns/strategy-pattern)
 Defines a family of algorithms and allows clients to choose the appropriate algorithm at runtime.
-
-- [Command Pattern](/guide/essentials/design-patterns/command-pattern)
-Encapsulates a request as an object, allowing for parameterization of clients with different requests, queuing, and undo functionality.
-

@@ -19,21 +19,20 @@ Design patterns are time-tested, generalized solutions to recurring problems tha
 
 ### Creational Patterns
 
-- [Singleton Pattern](/guide/essentials/design-patterns/singleton-pattern)
-- [Factory Pattern](/guide/essentials/design-patterns/factory-pattern)
 - [Builder Pattern](/guide/essentials/design-patterns/builder-pattern)
+- [Factory Pattern](/guide/essentials/design-patterns/factory-pattern)
+- [Provider Pattern](/guide/essentials/design-patterns/builder-pattern)
+- [Singleton Pattern](/guide/essentials/design-patterns/singleton-pattern)
 
 ### Structural Patterns
 
 - [Adapter Pattern](/guide/essentials/design-patterns/adapter-pattern)
-- [Decorator Pattern](/guide/essentials/design-patterns/decorator-pattern)
-- [Proxy Pattern](/guide/essentials/design-patterns/proxy-pattern)
+- [Facade Pattern](/guide/essentials/design-patterns/facade-pattern)
+- [Repository Pattern](/guide/essentials/design-patterns/repository-pattern)
 
 ### Behavioral Patterns
 
-- [Observer Pattern](/guide/essentials/design-patterns/observer-pattern)
 - [Strategy Pattern](/guide/essentials/design-patterns/strategy-pattern)
-- [Command Pattern](/guide/essentials/design-patterns/command-pattern)
 
 ## 3. Testing
     
@@ -52,4 +51,4 @@ Adhering to best practices in software development is essential for building hig
 - [Magic Number](/guide/essentials/best-practices/magic-number)
 - [Code Style](/guide/essentials/best-practices/code-style)
 - [Naming Convention](/guide/essentials/best-practices/naming-convention)
-- [Unnecessary Else](/guide/essentials/best-practices/unnecessary-else)
+- [Deep Nesting](/guide/essentials/best-practices/deep-nesting)

@@ -4,7 +4,7 @@ This principle encourages avoiding the duplication of code. When a piece of logi
 
 **Purpose:** Repeated code makes maintenance more difficult and increases the risk of bugs. By abstracting logic, you make the codebase more modular and maintainable.
 
-## Incorrect Example
+## Problem
 
 Imagine you're validating user input for registration where the same validation logic is repeated for multiple fields like username and email.
 
@@ -50,7 +50,7 @@ Why It's Incorrect:
 - The logic for validating the length of the username and email, and also the validation patterns (like checking the format of the email or username), is repeated.
 - If the length validation or regex pattern changes, you'd need to modify it in multiple places.
 
-## Correct Example
+## Solution
 
 To follow the DRY principle, we can create a generic validation function for length and pattern checking and use it in the specific validation functions.
 
