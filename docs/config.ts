@@ -9,6 +9,7 @@ export default withMermaid({
   cleanUrls: true,
   srcDir: './src',
   base: '/',
+  lastUpdated: true,
   sitemap: {
     hostname: 'https://dev.pointhub.net',
   },
