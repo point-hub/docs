@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - main
-      - staging
-    tags:
-      - 'v*.*.*'
   pull_request:
     branches:    
       - main
-      - staging
       
 jobs:
   build:
@@ -58,7 +54,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - name: Checkout master
         uses: actions/checkout@main
