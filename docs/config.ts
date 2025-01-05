@@ -117,17 +117,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Essentials', link: '/essentials/overview' },
       ],
     },
-    // TODO: finish the content first before adding this link
-    // {
-    //   text: 'Development',
-    //   collapsed: false,
-    //   items: [
-    //     { text: 'Pre Development', link: '/pre-development/introduction' },
-    //     { text: 'Backend Development', link: '/backend-development/introduction' },
-    //     { text: 'Frontend Development', link: '/frontend-development/introduction' },
-    //     { text: 'Deployment', link: '/deployment/introduction' },
-    //   ],
-    // },
+    {
+      text: 'Development',
+      collapsed: false,
+      items: [
+        // TODO: finish the content first before adding this link
+        // { text: 'Pre Development', link: '/pre-development/introduction' },
+        { text: 'Backend Development', link: '/backend-development/introduction' },
+        { text: 'Frontend Development', link: '/frontend-development/introduction' },
+        // TODO: finish the content first before adding this link
+        // { text: 'Deployment', link: '/deployment/introduction' },
+      ],
+    },
     {
       text: 'Contribution Guide',
       collapsed: false,
@@ -216,7 +217,21 @@ function sidebarBackendDevelopment(): DefaultTheme.SidebarItem[] {
     {
       text: 'Backend Development',
       collapsed: false,
-      items: [{ text: 'Introduction', link: '/introduction' }],
+      items: [
+        { text: 'Introduction', link: '/introduction' },
+        {
+          text: 'Software',
+          collapsed: false,
+          items: [
+            { text: 'Javascript', link: '/software/javascript' },
+            { text: 'Typescript', link: '/software/typescript' },
+            { text: 'Node.js', link: '/software/nodejs' },
+            { text: 'Bun', link: '/software/bun' },
+            { text: 'Express.js', link: '/software/expressjs' },
+            { text: 'MongoDB', link: '/software/mongodb' },
+          ],
+        },
+      ],
     },
   ]
 }
@@ -226,7 +241,22 @@ function sidebarFrontendDevelopment(): DefaultTheme.SidebarItem[] {
     {
       text: 'Frontend Development',
       collapsed: false,
-      items: [{ text: 'Introduction', link: '/introduction' }],
+      items: [
+        { text: 'Introduction', link: '/introduction' },
+        {
+          text: 'Software',
+          collapsed: false,
+          items: [
+            { text: 'Javascript', link: '/software/javascript' },
+            { text: 'Typescript', link: '/software/typescript' },
+            { text: 'Vite', link: '/software/vite' },
+            { text: 'Vue', link: '/software/vue' },
+            { text: 'Pinia', link: '/software/pinia' },
+            { text: 'Uno CSS', link: '/software/unocss' },
+            { text: 'Cypress', link: '/software/cypress' },
+          ],
+        },
+      ],
     },
   ]
 }
