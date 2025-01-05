@@ -49,7 +49,8 @@ Writing tests forces you to structure your code in a way that is modular, testab
     
 Adhering to best practices in software development is essential for building high-quality, maintainable, and scalable software. Best practices are the proven methods, strategies, and techniques that have been refined over time by the software development community.
 
-- [Magic Number](/guide/essentials/best-practices/magic-number)
 - [Code Style](/guide/essentials/best-practices/code-style)
-- [Naming Convention](/guide/essentials/best-practices/naming-convention)
 - [Deep Nesting](/guide/essentials/best-practices/deep-nesting)
+- [Environment Variable](/guide/essentials/best-practices/environment-variable)
+- [Magic Number](/guide/essentials/best-practices/magic-number)
+- [Naming Convention](/guide/essentials/best-practices/naming-convention)

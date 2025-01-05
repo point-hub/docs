@@ -191,10 +191,11 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
       text: 'Best Practices',
       collapsed: false,
       items: [
-        { text: 'Magic Number', link: '/best-practices/magic-number' },
         { text: 'Code Style', link: '/best-practices/code-style' },
-        { text: 'Naming Convention', link: '/best-practices/naming-convention' },
         { text: 'Deep Nesting', link: '/best-practices/deep-nesting' },
+        { text: 'Environment Varialbe', link: '/best-practices/environment-variable' },
+        { text: 'Magic Number', link: '/best-practices/magic-number' },
+        { text: 'Naming Convention', link: '/best-practices/naming-convention' },
       ],
     },
   ]
