@@ -72,6 +72,7 @@ function nav(): DefaultTheme.NavItem[] {
           items: [
             { text: 'How do I ask a good question', link: '/guide/contribution-guide/how-do-i-ask-a-good-question' },
             { text: 'Commit message convention', link: '/guide/contribution-guide/commit-message-convention' },
+            { text: 'Github workflow', link: '/guide/contribution-guide/github-workflow' },
           ],
         },
       ],
@@ -135,6 +136,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'How do I ask a good question', link: '/contribution-guide/how-do-i-ask-a-good-question' },
         { text: 'Commit message convention', link: '/contribution-guide/commit-message-convention' },
+        { text: 'Github workflow', link: '/contribution-guide/github-workflow' },
       ],
     },
   ]
