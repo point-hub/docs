@@ -199,6 +199,7 @@ function sidebarEssentials(): DefaultTheme.SidebarItem[] {
         { text: 'Environment Varialbe', link: '/best-practices/environment-variable' },
         { text: 'Magic Number', link: '/best-practices/magic-number' },
         { text: 'Naming Convention', link: '/best-practices/naming-convention' },
+        { text: 'Multiple Submission Prevention', link: '/best-practices/multiple-submission-prevention' },
       ],
     },
   ]
